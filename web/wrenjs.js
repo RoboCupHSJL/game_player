@@ -13,7 +13,7 @@ Module.expectedDataFileDownloads++;
         } else {
             throw "using preloaded data can only be done on a web page or in a web worker"
         }
-        var PACKAGE_NAME = "home/hitf/Downloads/webots_web/wrenjs.data" ;
+        var PACKAGE_NAME = "home/hitf/Downloads/web/wrenjs.data" ;
         var REMOTE_PACKAGE_BASE = "wrenjs.data";
         if (typeof Module["locateFilePackage"] === "function" && !Module["locateFile"]) {
             Module["locateFile"] = Module["locateFilePackage"];
@@ -135,9 +135,9 @@ Module.expectedDataFileDownloads++;
                 for (var i = 0; i < files.length; ++i) {
                     DataRequest.prototype.requests[files[i].filename].onload()
                 }
-                Module["removeRunDependency"]("datafile_/home/hitf/Downloads/webots_web/wrenjs.data")
+                Module["removeRunDependency"]("datafile_/home/hitf/Downloads/web/wrenjs.data")
             }
-            Module["addRunDependency"]("datafile_/home/hitf/Downloads/webots_web/wrenjs.data");
+            Module["addRunDependency"]("datafile_/home/hitf/Downloads/web/wrenjs.data");
             if (!Module.preloadResults)
                 Module.preloadResults = {};
             Module.preloadResults[PACKAGE_NAME] = {
